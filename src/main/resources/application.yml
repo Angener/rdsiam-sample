@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    initializationMode: always
+cloud:
+  aws:
+    credentials:
+      instanceProfile: true
+    region:
+      static: eu-central-1
+    stack:
+      auto: false
+    rds:
+      database-2:
+        databaseName: sample_database
+        password: <master password>
