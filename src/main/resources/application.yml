@@ -1,15 +1,13 @@
 spring:
   datasource:
-    initializationMode: always
+    url: jdbc:postgresql://database-2.cafqer3yrdii.eu-central-1.rds.amazonaws.com:5432/sample_database?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+    username: postgres
+    initialization-mode: always
 cloud:
   aws:
     credentials:
-      instanceProfile: true
+      instance-profile: true
     region:
       static: eu-central-1
     stack:
       auto: false
-    rds:
-      database-2:
-        databaseName: sample_database
-        password: <master password>
